@@ -13,7 +13,7 @@
       >
         <div class="tw-rounded-lg md:tw-w-2/3">
           <ProductInCart
-            v-for="(product, index) in cart?.products"
+            v-for="(product) in addToListImgCard"
             :key="product.id"
             :product="product"
           />
@@ -84,4 +84,11 @@ import { formatMoney } from "@/utils/functions";
 
 const { userInfo, loggedIn } = storeToRefs(useAuthStore());
 const { data: cart } = useGetUserCarts(userInfo.value.id);
+const  addToListImgCard = cart?.value?.products.map((item) => {
+  return {
+    ...item,
+    img : ['https://fakeimg.pl/200x100/?retina=1&text=こんにちは&font=noto']
+  }
+});
+
 </script>

@@ -37,7 +37,7 @@ export const routes = [
     beforeEnter: auth,
     children: [
       {
-        name: "Home Page",
+        name: "Home",
         path: "/",
         component: DashboardPage,
       },
