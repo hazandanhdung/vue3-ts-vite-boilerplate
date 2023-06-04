@@ -23,7 +23,7 @@ export const useListProductsInfiniteQuery = () => {
         skip,
       }),
     {
-      getNextPageParam: (lastPage) => {
+      getNextPageParam: (lastPage: any) => {
         if (lastPage.skip + lastPage.limit >= lastPage.total) return undefined;
 
         return lastPage.skip + lastPage.limit;
@@ -53,7 +53,7 @@ export const useGetProductsByCategory = (
 
 export const useGetUserCarts = (userId: string | number) => {
   return useQuery("user-carts", () => fetchUserCarts(userId), {
-    select: (data) => data.carts?.[0] ?? [],
+    select: (data: any) => data.carts?.[0] ?? [],
   });
 };
 

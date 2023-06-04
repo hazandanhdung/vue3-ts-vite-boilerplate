@@ -20,3 +20,55 @@ button {
 .btn:focus {
   box-shadow: none;
 }
+
+.list-center {
+  .v-list-item__content {
+    display: flex;
+    align-items: baseline;
+
+    .v-list-item-title {
+      margin-left: 10px;
+    }
+  }
+}
+
+.v-navigation-drawer {
+  width: auto !important;
+}
+
+.header-bar {
+  .v-toolbar__content {
+    display: flex;
+    flex-direction: column;
+    height: auto !important;
+  }
+}
+
+.w-50px {
+  width: 50px;
+}
+
+.h-50px {
+  height: 50px;
+}
+
+.fix-header {
+  position: fixed;
+  width: calc(100% - 117px) !important;
+  top: 0;
+  right: 0;
+  z-index: 999999;
+  transition: all 0.3s ease-in-out;
+}
+
+.container-fix {
+  width: calc(100% - 117px);
+  margin-left: auto;
+}
+
+
+.layout-wrapper {
+  width: calc(100% - 117px);
+  margin-left: auto
+}
+

@@ -42,5 +42,8 @@ module.exports = {
       borderColor: ["disabled"],
     },
   },
+  maxWidth: {
+    '1/2': '50%',
+  },
   plugins: [require("@tailwindcss/typography")],
 };

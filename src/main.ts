@@ -1,10 +1,11 @@
-import { createApp } from "vue";
+import {createApp} from "vue";
 import App from "@/App.vue";
 import router from "@/router";
 import interceptors from "@/plugins/interceptors";
 import axios from "axios";
-import { createPinia } from "pinia";
-import { VueQueryPlugin } from "vue-query";
+import {createPinia} from "pinia";
+import {VueQueryPlugin} from "vue-query";
+import vuetify from '@/plugins/vuetify';
 import mitt from "mitt";
 // Tailwind CSS
 import "@/assets/css/index.css";
@@ -29,6 +30,7 @@ app.provide("emitter", emitter);
 app.use(pinia);
 app.use(router);
 app.use(VueQueryPlugin);
+app.use(vuetify);
 
 // mount app
 app.mount("#app");
